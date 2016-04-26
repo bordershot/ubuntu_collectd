@@ -1,0 +1,11 @@
+name 'ubuntu_collectd'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures ubuntu_collectd'
+long_description 'Installs/Configures ubuntu_collectd'
+version '0.1.0'
+
+depends 'apt', '~> 3.0.0'
+depends 'collectd', '~> 2.2.2'
+depends 'collectd_plugins', '~> 2.1.2'

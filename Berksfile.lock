@@ -1,0 +1,19 @@
+DEPENDENCIES
+  ubuntu_collectd
+    path: .
+    metadata: true
+
+GRAPH
+  apt (3.0.0)
+  collectd (2.2.2)
+    poise (~> 2.2)
+    poise-service (~> 1.0)
+  collectd_plugins (2.1.2)
+    collectd (~> 2.0)
+  poise (2.7.0)
+  poise-service (1.2.1)
+    poise (~> 2.0)
+  ubuntu_collectd (0.1.0)
+    apt (~> 3.0.0)
+    collectd (~> 2.2.2)
+    collectd_plugins (~> 2.1.2)

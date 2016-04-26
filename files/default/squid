@@ -1,0 +1,8 @@
+#!/bin/sh
+
+INTERVAL=${COLLETD_INTERVAL:-10}
+HOSTNAME=tardis
+while sleep $INTERVAL; do
+squidclient -p 80 cache_object://localhost/counters | awk -v interval=${INTERVAL} -v host=${HOSTNAME} -F ' = ' '/client_http..*/ { gsub("\\.", "_", $1); print "PUTVAL", host"/squid/counter-"$1, "interval="interval, "N:"$2 }'
+done
+
